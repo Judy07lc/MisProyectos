@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin</title>
+    </head>
+    <body>  
+        <div id="menu">
+            Mesas
+            <img src="Imagenes/mesas.jpg"  width="35" height="35">
+            <ul>
+                <li><a href="mesas.php">Insertar</a></li>
+                <li><a href="#">Modificar</a></li>
+                <li><a href="#">Borrar</a></li>
+            </ul>
+            Reservas
+            <img src="Imagenes/reservas.jpg"  width="35" height="35">
+            <ul>
+                <li><a href="#">Insertar</a></li>
+                <li><a href="#">Modificar</a></li>
+                <li><a href="#">Borrar</a></li>
+            </ul>
+            Staff
+            <img src="Imagenes/staff.jpg"  width="35" height="35">
+            <ul>
+                <li><a href="#">Insertar</a></li>
+                <li><a href="#">Modificar</a></li>
+                <li><a href="#">Borrar</a></li>
+            </ul>
+            Platos
+            <img src="Imagenes/platos.jpg"  width="35" height="35">
+            <ul>
+                <li><a href="#">Insertar</a></li>
+                <li><a href="#">Modificar</a></li>
+                <li><a href="#">Borrar</a></li>
+            </ul>
+            Opiniones
+            <img src="Imagenes/opiniones.jpg"  width="35" height="35">
+            <ul>
+                <li><a href="#">Insertar</a></li>
+                <li><a href="#">Modificar</a></li>
+                <li><a href="#">Borrar</a></li>
+            </ul>
+         
+        </div>
+        <div id="contenido">
+        
+        </div>
+
+    </body>
+</html>
