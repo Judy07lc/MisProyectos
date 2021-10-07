@@ -4,14 +4,190 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>Descripción</title>
     </head>
     <body>
-        <? 
-            $ss = "Titulo";
-            echo $ss;
-        ?>
-    <h1><?=$ss?></h1>
+
+        <div class="cblW100p cbl-flex" style="border: solid 1px blue; height: 400px">
+            <div class="cbl-flex cbl-flex-6 cbl-flex-column" style="border: solid 1px red; height: 400px">
+
+                <div class="cblW100p cblWebFormRow ">
+                    <div class="cbl-flex cbl-flex-4 cbl_box_label">
+                        <label class="cbl_labelFormDiv">lorem ipsm lorem </label>
+                    </div>
+                    <div class="cbl-flex cbl-flex-8">
+                        <input type="text" value="" style="width: 20em;"/>
+                    </div>
+                </div>
+                <div class="cblW100p cblWebFormRow">
+                    <div class="cbl-flex cbl-flex-4">
+                        <label>lorem ipsm lorem ererrererer</label>
+                    </div>
+                    <div class="cbl-flex cbl-flex-8">
+                        <input type="text" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="cbl-flex cbl-flex-6" style="border: solid 1px purple; height: 400px"></div>
+        </div>    
+
+    <div class="cblW100p cbl-flex">
+        <div class="cbl-flex cbl-flex-6 cbl-flex-column">                  
+            <div class="cblW100p cblWebFormRow">                   
+                <div class="cbl-flex cbl-flex-4 cbl_box_label">
+                        <label class="cbl_labelFormDiv"> Firstname </label>                   
+                </div>
+                <div class="cbl-flex cbl-flex-8">
+                    <input type="text" value="" class=" cbl_InputDefault" />                
+            </div>
+                
+            </div>                      
+            <div class="cblWebFormRow">                   
+                <div class="cbl-flex cbl-flex-4 cbl_box_label">
+                        <label class="cbl_labelFormDiv"> Lastname </label>                   
+                </div>
+                <div class="cbl-flex cbl-flex-8">
+                    <input type="text" value="" class="cbl_g_flex cbl_InputDefault" />
+                </div>
+            </div>
+            <div class="cblWebFormRow">
+                <div class="cbl-flex cbl-flex-4 cbl_box_label">
+                    <label class="cbl_labelFormDiv">Language</label>
+                </div>
+                <div class="cbl-flex cbl-flex-8">
+                    <select name="seleLanguage" id="seleLang" style="background-color: blue; width:170.4px;">
+                        <option value="0">Selecciona el pais</option>
+                        <option value="1">España</option>
+                        <option value="2">Francia</option>
+                        <option value="3">Alemania</option>
+                        <option value="4">Italia</option>
+                    </select>
+                    
+                </div>
+            </div>  
+            <div class="cblWebFormRow">                   
+                    <div class="cbl-flex cbl-flex-4 cbl_box_label">
+                        <label class="cbl_labelFormDiv"> Phone </label>                   
+                    </div>
+                    <div class="cbl-flex cbl-flex-8">
+                        <input type="text" value="" class="cbl_g_flex cbl_InputDefault" />
+                    </div>
+            </div>
+            <div class="cblWebFormRow">
+                <div class="cbl_box_label cbl-flex-4">
+                    <label class="cbl_labelFormDiv"> Mobile </label>  
+                </div>
+                <div class="cbl-flex-8">
+                    <telerik:RadTextBox ID="TB_PhoneM" runat="server" Skin="Metro" MaxLength="25" CssClass="cbl_g_flex cbl_InputDefault" placeholder=" Phone mobile please">
+                    </telerik:RadTextBox>
+                </div>
+            </div>      
+                    
+            <div class="cblWebFormRow">                   
+                <div class="cbl-flex cbl-flex-4 cbl_box_label">
+                        <label class="cbl_labelFormDiv"> City </label>                   
+                </div>
+                <div class="cbl-flex cbl-flex-8">
+                    <input type="text" value="" class="cbl_g_flex cbl_InputDefault" />                           
+                </div>
+            </div>  
+
+            <div class="cblWebFormRow">                   
+                <div class=" cbl-flex cbl-flex-4cbl_box_label">
+                        <label class="cbl_labelFormDiv"> Country </label>                   
+                </div>
+                <telerik:RadComboBox runat="server" ID="RadCombobox1" RenderMode="LightWeight" CssClass="cblRadCombobox" Width="220px" Sort="Ascending">
+                    <items>
+                        <telerik:RadComboBoxItem Value="" Text="Select country please" />
+                        <telerik:RadComboBoxItem Value="" Text="Switzerland" />
+                        <telerik:RadComboBoxItem Value="" Text="Germany" />
+                        <telerik:RadComboBoxItem Value="" Text="Sepain" />
+                        <telerik:RadComboBoxItem Value="" Text="Australia" />
+                    </items>
+                </telerik:RadComboBox>
+            </div>  
+            <div class="cblWebFormRow">                   
+                <div class="cbl_box_label">
+                        <label class="cbl_labelFormDiv"> Date trip </label>                   
+                </div>
+                <telerik:RadDatePicker runat="server" ID="RadTimePicker1" RenderMode="LightWeight" Width="219px">
+                </telerik:RadDatePicker>
+            </div> 
+            <div class="cblWebFormRow">                   
+                <div class="cbl_box_label">
+                        <label class="cbl_labelFormDiv"> From </label>                   
+                </div>
+                <Cblc:CBLFindCBLAirport ID="CBLFindCBLAirport1" runat="server" AirportId='<%# Bind("TrplDepAptKey") %>' CssClass="cblAirportContent"/>
+            </div>                       
+        </div>
+                                 
+    <div class="cbl-flex cbl-flex-6 cbl-flex-column">
+        
+        <div class="cblWebFormRow">                   
+                <div class="cbl_box_label">
+                        <label class="cbl_labelFormDiv"> Street </label>                   
+                </div>
+                <input type="text" value="" class="cbl_g_flex cbl_InputDefault" />
+            </div>                      
+            <div class="cblWebFormRow">                   
+                <div class="cbl_box_label">
+                        <label class="cbl_labelFormDiv"> Mobile </label>                   
+                </div>
+                <input type="text" value="" class="cbl_g_flex cbl_InputDefault" />
+            </div>  
+                <div class="cblWebFormRow">                   
+                    <div class="cbl_box_label">
+                            <label class="cbl_labelFormDiv"> Postcode </label>                   
+                    </div>
+                    <input type="text" value="" class="cbl_g_flex cbl_InputDefault" />
+            </div>                      
+            <div class="cblWebFormRow">                   
+                <div class="cbl_box_label">
+                        <label class="cbl_labelFormDiv"> E-mail </label>                   
+                </div>
+                <input type="text" value="" class="cbl_g_flex cbl_InputDefault" />
+            </div>  
+            <div class="cblWebFormRow">                   
+                <div class="cbl_box_label">
+                        <label class="cbl_labelFormDiv"> Crew type </label>                   
+                </div>
+                <input type="text" value="" class="cbl_g_flex cbl_InputDefault" />
+            </div>  
+                <div class="cblWebFormRow">                   
+                    <div class="cbl_box_label">
+                            <label class="cbl_labelFormDiv"> Date trip </label>                   
+                    </div>
+                    <telerik:RadDatePicker runat="server" ID="RadTimePicker3" RenderMode="LightWeight" Width="219px">
+                    </telerik:RadDatePicker>
+                </div>                      
+    </div>
+</div>
+
+
+<div class="cblW100p cbl-flex" style="border: solid 1px blue; height: 400px">
+    <div class="cbl-flex cbl-flex-6 cbl-flex-column" style="border: solid 1px red; height: 400px">
+        <%-- WebForm with Juan  --%>
+        <div class="cblW100p cblWebFormRow ">
+            <div class="cbl-flex cbl-flex-5">
+                <label>Prefixm </label>
+            </div>
+            <div class="cbl-flex cbl-flex-7">
+                <input type="text" value="" />
+            </div>
+        </div>
+        <div class="cblW100p cblWebFormRow">
+            <div class="cbl-flex cbl-flex-5">
+                <label>lorem ipsm lorem ererrererer</label>
+            </div>
+            <div class="cbl-flex cbl-flex-7">
+                <input type="text" value="" />
+            </div>
+        </div>
+    </div>
+    <div class="cbl-flex cbl-flex-6" style="border: solid 1px purple; height: 400px"></div>
+</div>           
+
+
     </body>
 </html>
-
